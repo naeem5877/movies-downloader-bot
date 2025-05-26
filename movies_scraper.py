@@ -9,7 +9,7 @@ api_key = "3b3d907ecc4b18a3ae6a6f4416884454a301b1eb"
 def search_movies(query):
     movies_list = []
     movies_details = {}
-    website = BeautifulSoup(requests.get(f"https://mkvcinemas.cymru/?s={query.replace(' ', '+')}").text, "html.parser")
+    website = BeautifulSoup(requests.get(f"https://mkvcinemas.pet/?s={query.replace(' ', '+')}").text, "html.parser")
     movies = website.find_all("a", {'class': 'ml-mask jt'})
     for movie in movies:
         if movie:
